@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090d12">
+  <title>RGFL — Last Z Field Manual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand">
+        <div class="brand-mark">RGFL</div>
+        <div>
+          <div class="eyebrow">REAL GS FOR LIFE</div>
+          <h1>LAST Z FIELD MANUAL</h1>
+          <p>Quick strategy guides built for mobile.</p>
+        </div>
+      </div>
+      <button class="print-btn" id="printBtn" type="button">Save as PDF</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="toolbar" aria-label="Guide filters">
+      <label class="search-wrap">
+        <span class="sr-only">Search guides</span>
+        <input id="search" type="search" placeholder="Search: SvS, Tyrant, radar..." autocomplete="off">
+      </label>
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="All" type="button">All</button>
+        <button class="filter" data-filter="Events" type="button">Events</button>
+        <button class="filter" data-filter="War" type="button">War</button>
+        <button class="filter" data-filter="Mechanics" type="button">Mechanics</button>
+        <button class="filter" data-filter="Time" type="button">Time</button>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h2>Guides</h2>
+      <p>Tap any guide to view the full infographic. Key information is written below each image for quick reference.</p>
+    </section>
+
+    <section id="guideGrid" class="guide-grid" aria-live="polite"></section>
+    <div id="emptyState" class="empty" hidden>No guides match your search.</div>
+  </main>
+
+  <footer>
+    <strong>RGFL — Real Gs For Life</strong>
+    <span>Last Z player-made field manual.</span>
+  </footer>
+
+  <dialog id="viewer" class="viewer">
+    <div class="viewer-bar">
+      <div>
+        <div class="viewer-title" id="viewerTitle"></div>
+        <div class="viewer-hint">Scroll to see the full infographic.</div>
+      </div>
+      <button id="closeViewer" class="close-btn" type="button" aria-label="Close image viewer">×</button>
+    </div>
+    <div class="viewer-body"><img id="viewerImage" alt=""></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
